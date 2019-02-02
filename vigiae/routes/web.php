@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//usuario
+$router->get('user',  ['uses' => 'UserController@showAll']);
+$router->get('user/{id}',  ['uses' => 'UserController@show']);
+$router->post('user',  ['uses' => 'UserController@create']);
+$router->put('user/{id}',  ['uses' => 'UserController@update']);
+$router->delete('user/{id}',  ['uses' => 'UserController@destroy']);
